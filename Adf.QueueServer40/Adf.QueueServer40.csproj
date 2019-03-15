@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1DE5B177-DF78-4C3B-BAB1-A92DB252F059}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Adf.QueueServer</RootNamespace>
+    <AssemblyName>Adf.QueueServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>C:\develop\bin\adf.queueserver\2.0.0\net40\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>C:\develop\bin\adf.queueserver\2.0.0\net40\Adf.QueueServer.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Adf, Version=4.6.13.32025, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\adf\4.6.13\net40\Adf.dll</HintPath>
+    </Reference>
+    <Reference Include="Adf.Service, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\adf.service\2.0.2\net40\Adf.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Adf.QueueServer\ajax.js">
+      <Link>ajax.js</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Adf.QueueServer\control.js">
+      <Link>control.js</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Adf.QueueServer\ToolInstallService.bat">
+      <Link>ToolInstallService.bat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Adf.QueueServer\ToolRunConsole.bat">
+      <Link>ToolRunConsole.bat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\Adf.QueueServer\ToolUninstallService.bat">
+      <Link>ToolUninstallService.bat</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Adf.QueueServer\Action.cs">
+      <Link>Action.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\ActionProcessor.cs">
+      <Link>ActionProcessor.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\DataFileException.cs">
+      <Link>DataFileException.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\DataItem.cs">
+      <Link>DataItem.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\Hash.cs">
+      <Link>Hash.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\HttpHandler.cs">
+      <Link>HttpHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\IChannel.cs">
+      <Link>IChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\JournalManager.cs">
+      <Link>JournalManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\Properties\AssemblyInfo.cs">
+      <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\Queue.cs">
+      <Link>Queue.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\QueueHandler.cs">
+      <Link>QueueHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\QueueManager.cs">
+      <Link>QueueManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\QueueProperty.cs">
+      <Link>QueueProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\WebSocketBinary.cs">
+      <Link>WebSocketBinary.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\WebSocketBinaryState.cs">
+      <Link>WebSocketBinaryState.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\WebSocketJson.cs">
+      <Link>WebSocketJson.cs</Link>
+    </Compile>
+    <Compile Include="..\Adf.QueueServer\WebSocketJsonState.cs">
+      <Link>WebSocketJsonState.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
